@@ -17,6 +17,10 @@ pub use crate::droidplug::{
 pub use crate::winrtble::{
     adapter::Adapter, manager::Manager, peripheral::Peripheral, peripheral::PeripheralId,
 };
+#[cfg(target_os = "espidf")]
+pub use crate::nimble::{
+    adapter::Adapter, manager::Manager, peripheral::Peripheral, peripheral::PeripheralId,
+};
 
 use crate::api::{self, Central};
 use static_assertions::assert_impl_all;

@@ -109,6 +109,8 @@ pub mod platform;
 pub mod serde;
 #[cfg(target_os = "windows")]
 mod winrtble;
+#[cfg(target_os = "espidf")]
+mod nimble;
 
 /// The main error type returned by most methods in btleplug.
 #[derive(Debug, thiserror::Error)]
